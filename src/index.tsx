@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from "react-router";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,7 +10,17 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          {/* <Route index element={<ForYouPage />} />
+          <Route path="artists/:slug/:id" element={<ArtistPage />} />
+          <Route path="album" element={<AlbumPage />} />
+          <Route path="radio" element={<RadioPage />} />
+          <Route path="*" element={<NotFoundPage />} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
