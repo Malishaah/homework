@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import ImageGallery from "./components/ImageGallery";
+import Favorites from "./components/Favorites";
+import NotFound from "./components/NotFound";
+import SearchBar from "./components/SearchBar";
 
-function App() {
+const App = () => {
+  const [query, setQuery] = useState("nature");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <SearchBar onSearch={setQuery} />
+      <Routes>
+        <Route path="/" element={<ImageGallery query={query} />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
-}
+};
 
 export default App;
