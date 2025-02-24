@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from "react-router";
 import './index.css';
 import App from './App';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+const queryClient = new QueryClient();
+
 root.render(
   <React.StrictMode>
+        <QueryClientProvider client={queryClient}></QueryClientProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
@@ -21,6 +25,7 @@ root.render(
         </Route>
       </Routes>
     </BrowserRouter>
+    </QueryClientProvider>
   </React.StrictMode>
 );
 
