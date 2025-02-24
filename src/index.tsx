@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom"; // Ändrat från "react-router" till "react-router-dom"
 import './index.css';
-import App from './App';
+import App from './HomePage';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import reportWebVitals from './reportWebVitals';
 
@@ -13,18 +13,17 @@ const queryClient = new QueryClient();
 
 root.render(
   <React.StrictMode>
-        <QueryClientProvider client={queryClient}></QueryClientProvider>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
           {/* <Route index element={<ForYouPage />} />
           <Route path="artists/:slug/:id" element={<ArtistPage />} />
           <Route path="album" element={<AlbumPage />} />
           <Route path="radio" element={<RadioPage />} />
           <Route path="*" element={<NotFoundPage />} /> */}
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
     </QueryClientProvider>
   </React.StrictMode>
 );
