@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { Photo } from "../api";
 import ImageCard from "./ImageCard";
+import styled from "styled-components";
+
+const Container = styled.div`
+  padding: 20px;
+  text-align: center;
+`;
 
 const Favorites = () => {
   const [favorites, setFavorites] = useState<Photo[]>([]);
@@ -13,7 +19,7 @@ const Favorites = () => {
   }, []);
 
   return (
-    <div>
+    <Container>
       <h2>Mina Favoriter</h2>
       {favorites.length === 0 ? (
         <p>Inga favoriter ännu.</p>
@@ -24,7 +30,7 @@ const Favorites = () => {
           ))}
         </div>
       )}
-    </div>
+    </Container>
   );
 };
 
