@@ -90,3 +90,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ---
+## ✅ Project Checklist
+
+### 📌 **Requirements for "Godkänt" (Pass)**
+- [x] **Project contains at least 6 components, at least 2 are stateful**
+- [x] **React Router is used to dynamically update the URL**
+- [x] **Git & GitHub have been used for version control**
+- [x] **A `README.md` file is included in the project folder**
+- [x] **The assignment is submitted on time**
+- [x] **A verbal presentation has been conducted**
+
+---
+
+### 🌟 **Requirements for "Väl Godkänt" (Distinction)**
+- [x] **All "Godkänt" (Pass) requirements are fulfilled**
+- [x] **A "CSS-in-JS" library is used for styling** (e.g., Styled-Components, JSS)
+- [x] **Data is fetched from a web API and displayed on the page**
+
+https://precious-arithmetic-6b3bad.netlify.app
