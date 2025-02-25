@@ -12,7 +12,7 @@ const FooterContainer = styled.footer`
 const Footer = () => {
   return (
     <FooterContainer>
-      <p>Byggd med ❤️ av Mali Roshanshah | Bilder från <a href="https://www.pexels.com" target="_blank" style={{ color: "#3498db" }}>Pexels API</a></p>
+      <p>Byggd med ❤️ av Mali Roshanshah | Bilder från <a href="https://www.pexels.com" style={{ color: "#3498db" }}>Pexels API</a></p>
     </FooterContainer>
   );
 };
