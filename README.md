@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# 📸 React Image Gallery with Pexels API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern and responsive **image gallery** built with **React, TypeScript, and Styled Components**.  
+Users can **search for images**, **save favorites**, and **open images in a modal**.  
+Images are fetched via **Pexels API**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌟 Features
 
-### `npm start`
+✅ **Search Functionality** – Users can search for images using the Pexels API  
+✅ **Favorites System** – Save and remove images from a favorites list (`localStorage` support)  
+✅ **Modal Image Viewer** – Click an image to open it in a large view modal  
+✅ **Pagination** – Navigate through multiple pages of images  
+✅ **Dark/Light Mode** – Switch between dark and light themes  
+✅ **Responsive Design** – Fully optimized for mobile, tablet, and desktop  
+✅ **Loading Spinner** – Displays a spinner while fetching images  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📦 **Technologies Used**
 
-### `npm test`
+- **React 18 + TypeScript** – Modern frontend development
+- **Styled Components** – CSS-in-JS for dynamic styling
+- **React Query (`@tanstack/react-query`)** – Efficient API request management
+- **React Router** – Navigation between pages
+- **Pexels API** – Fetches images based on user search
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ **Installation and Running the Project**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🔹 1. Clone the Repository
+```sh
+git clone https://github.com/malishaah/homework.git
+cd homework
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🔹 2. Install Dependencies
+```sh
+npm install
+# or
+yarn install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🔹 3. Start the Development Server
+```sh
+npm start
+# or
+yarn start
+```
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📁 **Project Structure**
+```
+📂 react-pexels-gallery
+ ┣ 📂 src
+ ┃ ┣ 📂 components
+ ┃ ┃ ┣ 📜 Navbar.tsx
+ ┃ ┃ ┣ 📜 SearchBar.tsx
+ ┃ ┃ ┣ 📜 ImageGallery.tsx
+ ┃ ┃ ┣ 📜 ImageCard.tsx
+ ┃ ┃ ┣ 📜 Favorites.tsx
+ ┃ ┃ ┣ 📜 Modal.tsx
+ ┃ ┃ ┣ 📜 ThemeSwitcher.tsx
+ ┃ ┃ ┣ 📜 Pagination.tsx
+ ┃ ┃ ┣ 📜 Footer.tsx
+ ┃ ┃ ┗ 📜 NotFound.tsx
+ ┃ ┣ 📜 App.tsx
+ ┃ ┣ 📜 index.tsx
+ ┃ ┣ 📜 api.ts
+ ┃ ┣ 📜 types.ts
+ ┃ ┗ 📜 styles.ts (global styling)
+ ┣ 📜 package.json
+ ┣ 📜 .gitignore
+ ┗ 📜 README.md
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 📜 **License**
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🤝 **Contributing**
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---

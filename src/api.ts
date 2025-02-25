@@ -1,8 +1,8 @@
 const API_KEY = "563492ad6f91700001000001e9543e64cc6240f3a18b3b0d9f42629d";
 
-export async function fetchImages(query: string = "nature", perPage: number = 10) {
+export async function fetchImages(query: string = "nature", perPage: number = 10, page: number = 1) {
   const response = await fetch(
-    `https://api.pexels.com/v1/search?query=${query}&per_page=${perPage}`,
+    `https://api.pexels.com/v1/search?query=${query}&per_page=${perPage}&page=${page}`,
     {
       headers: { Authorization: API_KEY },
     }
