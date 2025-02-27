@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-const SearchContainer = styled.div`
+const SearchContainer = styled.form`
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -41,21 +41,23 @@ const Button = styled.button`
 const SearchBar = ({ onSearch }: { onSearch: (query: string) => void }) => {
   const [query, setQuery] = useState("");
 
-  const handleSearch = () => {
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault(); 
+    
     if (query.trim()) {
       onSearch(query);
     }
   };
 
   return (
-    <SearchContainer>
+    <SearchContainer onSubmit={handleSearch}>
       <Input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Sök bilder..."
       />
-      <Button onClick={handleSearch}>Sök</Button>
+      <Button type="submit">Sök</Button>
     </SearchContainer>
   );
 };
