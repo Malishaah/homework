@@ -16,21 +16,21 @@ const ModalContent = styled.div`
   background: white;
   padding: 20px;
   border-radius: 10px;
-  max-width: 80%;
+  max-width: 50%;
   text-align: center;
   position: relative;
 `;
 
 const CloseButton = styled.button`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 50%;
+  right: 20px;
   border: none;
   background: red;
   color: white;
-  padding: 5px 10px;
+  padding: 15px 18px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 50%;
 `;
 
 const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
@@ -39,7 +39,7 @@ const Modal = ({ image, onClose }: { image: string; onClose: () => void }) => {
   return (
     <ModalOverlay onClick={onClose}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
-        <CloseButton onClick={onClose}>✖</CloseButton>
+        <CloseButton onClick={onClose}>⛌</CloseButton>
         <img src={image} alt="Large view" style={{ maxWidth: "100%" }} />
       </ModalContent>
     </ModalOverlay>

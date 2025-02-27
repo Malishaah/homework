@@ -7,7 +7,7 @@ interface ThemeSwitcherProps {
 }
 
 const Button = styled.button`
-  background: #3498db;
+  background: #b45573;
   color: white;
   border: none;
   padding: 10px;
@@ -18,13 +18,13 @@ const Button = styled.button`
   margin: auto;
 
   &:hover {
-    background: #2980b9;
+    background: #86404a;
   }
 `;
 
 // 🟢 Använd props-typen i komponenten
 const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ toggleTheme, darkMode }) => {
-  return <Button onClick={toggleTheme}>{darkMode ? "🌞 Ljust läge" : "🌙 Mörkt läge"}</Button>;
+  return <Button onClick={toggleTheme}>{darkMode ? "𖤓 Ljust läge" : "⏾ Mörkt läge"}</Button>;
 };
 
 export default ThemeSwitcher;

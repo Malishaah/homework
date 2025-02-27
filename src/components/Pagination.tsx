@@ -8,7 +8,7 @@ const PaginationContainer = styled.div`
 `;
 
 const PageButton = styled.button`
-  background: #3498db;
+  background:#b45573;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -17,7 +17,7 @@ const PageButton = styled.button`
   transition: 0.3s;
 
   &:hover {
-    background: #2980b9;
+    background:#86404a;
   }
 `;
 

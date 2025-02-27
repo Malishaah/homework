@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`
-  background: #2c3e50;
+  background:#392c50;
   color: white;
   text-align: center;
   padding: 10px;
@@ -12,7 +12,7 @@ const FooterContainer = styled.footer`
 const Footer = () => {
   return (
     <FooterContainer>
-      <p>Byggd med ❤️ av Mali Roshanshah | Bilder från <a href="https://www.pexels.com" style={{ color: "#3498db" }}>Pexels API</a></p>
+      <p>Byggd av Mali Roshanshah | Bilder från <a href="https://www.pexels.com" style={{ color: "#57ff37"}}>Pexels API</a></p>
     </FooterContainer>
   );
 };

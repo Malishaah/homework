@@ -18,13 +18,13 @@ const Input = styled.input`
   transition: border-color 0.3s;
 
   &:focus {
-    border-color: #3498db;
+    border-color: #392c50;
     outline: none;
   }
 `;
 
 const Button = styled.button`
-  background: #3498db;
+  background: #b45573;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -34,7 +34,7 @@ const Button = styled.button`
   transition: background 0.3s;
 
   &:hover {
-    background: #2980b9;
+    background: #86404a;
   }
 `;
 

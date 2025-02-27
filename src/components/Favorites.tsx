@@ -35,7 +35,7 @@ const Favorites = () => {
 
   return (
     <>
-      <h2 style={{ textAlign: "center" }}>❤️ Mina Favoriter</h2>
+      <h2 style={{ textAlign: "center" }}>♥️ Mina Favoriter</h2>
       {favorites.length === 0 ? (
         <Message>Inga favoriter ännu.</Message>
       ) : (

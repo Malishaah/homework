@@ -6,7 +6,7 @@ import Modal from "./Modal";
 const Card = styled.div`
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 10px 15px rgba(32, 8, 85, 0.3);
   background: white;
   transition: transform 0.2s, box-shadow 0.3s;
   position: relative;
@@ -20,7 +20,7 @@ const Card = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 6px 24px rgba(41, 17, 91, 0.8);
   }
 `;
 
@@ -52,7 +52,7 @@ const Photographer = styled.p`
 `;
 
 const Link = styled.a`
-  color: #3498db;
+  color: #392c50;
   text-decoration: none;
   font-size: 14px;
 
@@ -65,18 +65,16 @@ const FavoriteButton = styled.button<{ isFavorite: boolean }>`
   position: absolute;
   top: 10px;
   right: 10px;
-  background: ${({ isFavorite }) => (isFavorite ? "red" : "white")};
-  color: ${({ isFavorite }) => (isFavorite ? "white" : "black")};
+  background: transparent;
+  color: ${({ isFavorite }) => (isFavorite ? "red" : "white")};
   border: none;
-  padding: 5px 10px;
-  border-radius: 50%;
+  padding: 5px;
   cursor: pointer;
-  font-size: 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s, color 0.3s;
+  font-size: 44px;
+  transition: color 0.3s;
 
   &:hover {
-    background: ${({ isFavorite }) => (isFavorite ? "#d32f2f" : "#f0f0f0")};
+    color: ${({ isFavorite }) => (isFavorite ? "#d32f2f" : "red")};
   }
 `;
 
@@ -107,16 +105,16 @@ const ImageCard = ({ photo, removeFavorite }: { photo: Photo; removeFavorite?: (
           e.stopPropagation(); 
           toggleFavorite(); 
         }}>
-          {isFavorite ? "❤️" : "🤍"}
+          {isFavorite ? "❤︎" : "❤︎"}
         </FavoriteButton>
         <ImageWrapper>
           <Image src={photo.src.medium} alt={photo.alt} />
         </ImageWrapper>
         <Info>
           <Photographer>
-            📸 <Link href={photo.photographer_url} target="_blank">{photo.photographer}</Link>
+          ˙✧˖°📸 <Link href={photo.photographer_url} target="_blank">{photo.photographer} ✧⋆˚</Link>
           </Photographer>
-          <Link href={photo.src.original} target="_blank">Se originalbild</Link>
+          <Link href={photo.src.original} target="_blank">▸ Se originalbild</Link>
         </Info>
       </Card>
 

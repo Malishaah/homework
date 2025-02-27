@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
-  background: #2c3e50;
+  background: #392c50;
   padding: 15px;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ const StyledLink = styled(Link)`
   transition: background 0.3s;
 
   &:hover {
-    background: #34495e;
+    background:#645380;
   }
 `;
 
