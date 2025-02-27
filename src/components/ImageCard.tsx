@@ -41,10 +41,22 @@ const Image = styled.img`
 `;
 
 const Info = styled.div`
-  padding: 10px;
+  padding: 10px 0px;
   text-align: center;
   height: 30%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Halvtransparent vit */
+  backdrop-filter: blur(10px); /* Suddar bilden under */
+  -webkit-backdrop-filter: blur(10px); /* För Safari */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
+
 
 const Photographer = styled.p`
   font-size: 14px;
@@ -54,10 +66,10 @@ const Photographer = styled.p`
 const Link = styled.a`
   color: #392c50;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
 
   &:hover {
-    text-decoration: underline;
+    color:rgb(206, 35, 70);
   }
 `;
 
@@ -112,7 +124,7 @@ const ImageCard = ({ photo, removeFavorite }: { photo: Photo; removeFavorite?: (
         </ImageWrapper>
         <Info>
           <Photographer>
-          ˙✧˖°📸 <Link href={photo.photographer_url} target="_blank">{photo.photographer} ✧⋆˚</Link>
+          ˙✧˖📸 <Link href={photo.photographer_url} target="_blank">{photo.photographer} ✧⋆˚</Link>
           </Photographer>
           <Link href={photo.src.original} target="_blank">▸ Se originalbild</Link>
         </Info>

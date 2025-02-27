@@ -4,7 +4,6 @@ const FooterContainer = styled.footer`
   background:#392c50;
   color: white;
   text-align: center;
-  padding: 10px;
   bottom: 0;
   width: 100%;
 `;

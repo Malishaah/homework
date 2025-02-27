@@ -9,6 +9,7 @@ interface ThemeSwitcherProps {
 const Button = styled.button`
   background: #b45573;
   color: white;
+  font-size: 14px;
   border: none;
   padding: 10px;
   border-radius: 5px;
